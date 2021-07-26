@@ -26,7 +26,8 @@ This is project starts off from the same premise (using JUCE's plugin scanner) a
 
 - not suppressing stdout or stderr (yet)
 
-- plugin size is quite large (25MB) due to static linking
+- plugin size is quite large (25MB) in static version, (27MB) in dynamic
+  version.
 
 
 ## Usage
@@ -42,13 +43,18 @@ for i in range(p.getNumPlugins()):
 
 ```
 
-## To Build
+## To Build (static version)
+
+Recommend to use the static version. 
+
+See the README inside the `pluginscan-dynamic` for build instructions for that version.
 
 Assumes JUCE SDK is in `$HOME/JUCE` and the platform is macOS.
 
 To build the extension:
 
 ```
+$ cd pluginscan-static
 $ make
 
 ```
